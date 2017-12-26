@@ -1,6 +1,6 @@
 # works
 
-Create react app with TypeScript && css-in-js way. 
+Create react app with TypeScript && css-in-js. 
 
 ## Get Started
 Init a project:
