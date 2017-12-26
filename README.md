@@ -1,6 +1,6 @@
 # works
 
-Create react app with TypeScript && css-in-js. 
+Create react app with TypeScript & css-in-js. 
 
 ## Get Started
 Init a project:
@@ -26,7 +26,7 @@ const styles = {
     gray: '#EEE',
   }
 }
-export const myComponent = (hover: Booleab) => ({
+export const myComponent = (hover: Boolean) => ({
   color: hover ? styles.black : styles.white,
   border: `1px solid ${styles.gray}`,
 } as CSSProperties);
