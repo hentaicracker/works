@@ -5,6 +5,10 @@ export const game = {
   flexDirection: 'row',
 } as CSSProperties;
 
+export const status = () => ({
+  marginBottom: 10,
+});
+
 export const gameInfo = () => ({
   marginLeft: 20,
 });

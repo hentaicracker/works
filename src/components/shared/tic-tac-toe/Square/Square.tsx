@@ -5,7 +5,8 @@ import * as styles from './Square-styles';
 const { Button } = glamorous;
 
 interface Props {
-  value: number;
+  wining: Boolean;
+  value: string;
   onClick: Function;
 }
 
@@ -13,7 +14,7 @@ export class Square extends React.Component<Props, {}> {
   
   render() {
     return (
-      <Button css={styles.square()} onClick={() => this.props.onClick()} >
+      <Button css={styles.square(this.props.wining)} onClick={() => this.props.onClick()} >
       {this.props.value}
       </Button>
     );
