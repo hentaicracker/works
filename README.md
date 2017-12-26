@@ -59,3 +59,11 @@ export class MyComponent extends React.Component<Props, State> {
   }
 }
 ```
+
+## Developing
+```shell
+$ yarn start
+
+$ yarn build
+```
+There has a problem with glamorous, when you try to give a glamorous Button an onClick attribute with a Function as argument, a error will be display. Just look at this [issue](https://github.com/paypal/glamorous/issues/353).
