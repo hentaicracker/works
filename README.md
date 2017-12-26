@@ -54,7 +54,7 @@ export class MyComponent extends React.Component<Props, State> {
 
   render() {
     return (
-      <Div css={styles.myComponent(this.props.hovering)} />
+      <Div css={styles.myComponent(this.state.hovering)} />
     )
   }
 }
