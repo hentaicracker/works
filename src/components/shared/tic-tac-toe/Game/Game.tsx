@@ -1,6 +1,6 @@
 import * as React from 'react';
 import glamorous from 'glamorous';
-import { Board } from './../Board/Board';
+import { Board } from './../Board';
 import * as styles from './Game-styles';
 
 import { autobind } from 'core-decorators';
