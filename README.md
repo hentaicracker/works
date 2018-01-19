@@ -27,8 +27,8 @@ const styles = {
   }
 }
 export const myComponent = (hover: Boolean) => ({
-  color: hover ? styles.black : styles.white,
-  border: `1px solid ${styles.gray}`,
+  color: hover ? styles.color.black : styles.color.white,
+  border: `1px solid ${styles.color.gray}`,
 } as CSSProperties);
 ```
 Importing style file in your component.

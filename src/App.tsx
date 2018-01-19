@@ -1,15 +1,15 @@
 import * as React from 'react';
-// import { Header } from './components/shared/header/header';
-import { Game } from './components/shared/tic-tac-toe/Game';
+// import { connect } from 'react-redux';
 import './App.css';
 
-class App extends React.Component {
+class AppImpl extends React.Component {
   render() {
     return (
-      // <Header />
-      <Game />
+      <div>
+        {this.props.children}
+      </div>
     );
   }
 }
 
-export default App;
+export default AppImpl;

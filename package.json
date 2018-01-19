@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^3.0.0",
+    "axios": "^0.17.1",
     "core-decorators": "^0.20.0",
     "glamor": "^2.20.40",
     "glamorous": "^4.11.0",
@@ -13,7 +14,8 @@
     "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-scripts-ts": "2.8.0",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start": "react-app-rewired start --scripts-version react-scripts-ts",
