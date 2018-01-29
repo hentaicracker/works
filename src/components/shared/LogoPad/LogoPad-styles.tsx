@@ -3,7 +3,7 @@ import { CSSProperties } from 'glamorous';
 
 export const logoPad = () => ({
   height: '50px',
-  borderBottom: `1px solid ${colors.borderGray}`,
+  borderBottom: `1px solid ${colors.themeBorder}`,
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
@@ -14,7 +14,7 @@ export const logo = () => ({
   width: '50px',
   height: '50px',
   borderRadius: '50%',
-  backgroundColor: colors.darkGray,
+  backgroundColor: colors.themeLightColor,
 } as CSSProperties);
 
 export const logoTitle = () => ({

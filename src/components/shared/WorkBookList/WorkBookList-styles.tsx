@@ -8,8 +8,8 @@ export const wbWrapper = () => ({
 export const wbItem = (active: boolean) => ({
   padding: '1em 1.5em',
   cursor: 'pointer',
-  backgroundColor: active ? colors.darkGray : colors.white,
+  backgroundColor: active ? colors.themeLightColor : colors.white,
   '&:hover': {
-    backgroundColor: colors.regularGray
+    backgroundColor: colors.themeRegularColor
   },
 } as CSSProperties);

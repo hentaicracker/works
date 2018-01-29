@@ -9,22 +9,30 @@ interface Props {
   list: Array<{
     workbookId: string;
     workbookName: string;
-    active: boolean;
   }>;
+  activeWb: string;
   onClick: Function;
+}
+
+function Item(props: any) {
+  return (
+    <Li css={styles.wbItem(props.highLight)} onClick={() => props.onClick(props.id)}>
+      {props.name}
+    </Li>
+  );
 }
 
 export class WorkBookList extends React.Component<Props, {}> {
 
   renderItem() {
     return this.props.list.map((item, idx) => (
-      <Li 
-        css={styles.wbItem(item.active)} 
+      <Item 
         key={idx}
-        onClick={() => this.props.onClick(item.active, idx)}
-      >
-        {item.workbookName}
-      </Li>
+        id={item.workbookId}
+        name={item.workbookName}
+        highLight={this.props.activeWb === item.workbookId}
+        onClick={(id: string) => this.props.onClick(id)}
+      />
     ));
   }
 

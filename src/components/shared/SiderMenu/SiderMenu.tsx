@@ -2,6 +2,7 @@ import * as React from 'react';
 import glamorous from 'glamorous';
 import { LogoPad } from '../LogoPad';
 import { WorkBookList } from '../WorkBookList';
+import { NewButtons } from '../NewButtons';
 import { autobind } from 'core-decorators';
 
 import { workbooklist } from '../../../state/data';
@@ -16,26 +17,21 @@ interface SiderMenuState {
   workBookList: Array<{
     workbookId: string;
     workbookName: string;
-    active: boolean;
   }>;
+  activeWb: string;
 }
 
 export class SiderMenu extends React.Component<Props, SiderMenuState> {
 
   state: SiderMenuState = {
-    workBookList: workbooklist.map(item => Object.assign(item, {
-      active: false
-    }))
+    workBookList: workbooklist,
+    activeWb: '',
   };
 
   @autobind
-  handleClick(active: boolean, index: number) {
-    const wbList = this.state.workBookList.map((wb, idx) => {
-      wb.active = index === idx ? true : false;
-      return wb;
-    }).slice();
+  handleClick(id: string) {
     this.setState({
-      workBookList: wbList
+      activeWb: id
     });
   }
 
@@ -45,8 +41,10 @@ export class SiderMenu extends React.Component<Props, SiderMenuState> {
         <LogoPad />
         <WorkBookList 
           list={this.state.workBookList} 
-          onClick={(active: boolean, idx: number) => this.handleClick(active, idx)} 
+          activeWb={this.state.activeWb}
+          onClick={(id: string) => this.handleClick(id)} 
         />
+        <NewButtons />
       </Aside>
     );
   }
