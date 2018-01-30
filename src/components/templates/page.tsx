@@ -1,9 +1,13 @@
 import * as React from 'react';
 import glamorous from 'glamorous';
 
+import { SiderMenu } from '../shared/SiderMenu';
+import { ListMenu } from '../shared/ListMenu';
+import { ContentDetails } from '../shared/ContentDetails';
+
 import * as styles from './_styles';
 
-const { Div, Aside, Section } = glamorous;
+const { Div } = glamorous;
 
 export interface PageProps {
 
@@ -13,15 +17,9 @@ export class Page extends React.Component<PageProps, object> {
   render() {
     return (
       <Div css={styles.page()}>
-        <Aside css={styles.aside()}>
-          hello
-        </Aside>
-        <Section css={styles.listWrapper()}>
-          world
-        </Section>
-        <Section css={styles.contentWrapper()}>
-          !!
-        </Section>
+        <SiderMenu />
+        <ListMenu />
+        <ContentDetails />
       </Div>
     );
   }
