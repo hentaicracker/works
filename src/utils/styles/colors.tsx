@@ -57,6 +57,6 @@ export const themeBorder = borderGray;
 export const themeBackColor = backgroundGray;
 export const themeLightColor = hoverBackgroundBlue;
 export const themeRegularColor = regularGray;
-export const themeDarkColor = darkGray;
+export const themeDarkColor = darkBlue;
 export const themeShadowColor = shadowGray;
 export const themeMediumColor = mediumGray;

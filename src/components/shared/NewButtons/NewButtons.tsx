@@ -41,7 +41,7 @@ export class NewButtons extends React.Component<{}, NewButtonsState> {
       <Btn
         title={item.title}
         type={item.type}
-        css={styles.button(item.type)}
+        css={styles.button(item.type, this.state.showAnimate)}
         showAnimate={this.state.showAnimate}
         handler={() => this.handler(item.type)}
       />
