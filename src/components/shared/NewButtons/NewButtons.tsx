@@ -1,5 +1,6 @@
 import * as React from 'react';
 import glamorous from 'glamorous';
+import { Modal } from '../atoms/Modal';
 import { Icon } from '../atoms/Icon';
 import * as styles from './NewButtons-styles';
 
@@ -11,6 +12,8 @@ const { Div, Button } = glamorous;
 
 interface NewButtonsState {
   showAnimate: boolean;
+  showWbModal: boolean;
+  showWbItemModal: boolean;
 }
 
 function Btn(props: any) {
@@ -24,7 +27,9 @@ function Btn(props: any) {
 export class NewButtons extends React.Component<{}, NewButtonsState> {
 
   state = {
-    showAnimate: false
+    showAnimate: false,
+    showWbModal: false,
+    showWbItemModal: false,
   };
 
   @autobind
@@ -34,11 +39,22 @@ export class NewButtons extends React.Component<{}, NewButtonsState> {
         showAnimate: !this.state.showAnimate
       });
     }
+    if (type === 'wb') {
+      this.setState({
+        showWbModal: true
+      });
+    }
+    if (type === 'wbItem') {
+      this.setState({
+        showWbItemModal: true
+      });
+    }
   }
 
   render() {
-    const btns = btnsTypes.map(item => (
+    const btns = btnsTypes.map((item, idx) => (
       <Btn
+        key={idx}
         title={item.title}
         type={item.type}
         css={styles.button(item.type, this.state.showAnimate)}
@@ -49,6 +65,18 @@ export class NewButtons extends React.Component<{}, NewButtonsState> {
     return (
       <Div css={styles.buttonsWrapper()}>
         {btns}
+        <Modal
+          show={this.state.showWbModal}
+          maskTransparency={0.5}
+        >
+          <Div />
+        </Modal>
+        <Modal
+          show={this.state.showWbItemModal}
+          maskTransparency={0}
+        >
+          <Div >666</Div>
+        </Modal>
       </Div>
     );
   }

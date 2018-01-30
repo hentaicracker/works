@@ -60,3 +60,6 @@ export const themeRegularColor = regularGray;
 export const themeDarkColor = darkBlue;
 export const themeShadowColor = shadowGray;
 export const themeMediumColor = mediumGray;
+export const themeBoxshadowColor = 'rgba(0,0,0, .15)';
+
+export const themeMaskColor = (transparency: number) => (`rgba(0,0,0,${transparency})`);

@@ -72,6 +72,32 @@ export const icon = (animate: boolean): CSSProperties => ({
       borderBottom: `solid 7px ${colors.black}`,
       transform: `rotate(180deg)`
     }
+  },
+
+  '&.close': {
+    width: 20,
+    height: 20,
+    transform: 'rotate(45deg)',
+
+    '&::before': {
+      content: ' ',
+      display: 'block',
+      position: 'absolute',
+      width: '20px',
+      height: '1px',
+      left: 0,
+      top: 10,
+      backgroundColor: colors.themeDarkColor,
+    },
+    '&::after': {
+      content: ' ',
+      position: 'absolute',
+      height: '20px',
+      width: '1px',
+      top: 0,
+      left: 9,
+      backgroundColor: colors.themeDarkColor,
+    },
   }
 
 });

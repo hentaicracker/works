@@ -20,3 +20,8 @@ button {
 #root {
   height: 100%
 }
+
+#dialog-root {
+  position: relative;
+  z-index: 999;
+}
