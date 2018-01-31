@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/prop-types": "^15.5.2",
     "antd": "^3.0.0",
     "axios": "^0.17.1",
     "core-decorators": "^0.20.0",

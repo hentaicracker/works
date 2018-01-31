@@ -51,6 +51,25 @@ export class NewButtons extends React.Component<{}, NewButtonsState> {
     }
   }
 
+  @autobind
+  closeModal(type: string) {
+    if (type === 'wb') {
+      this.setState({
+        showWbModal: false
+      });
+    }
+    if (type === 'wbItem') {
+      this.setState({
+        showWbItemModal: false
+      });
+    }
+  }
+
+  @autobind
+  saveForm() {
+    console.log('true');
+  }
+
   render() {
     const btns = btnsTypes.map((item, idx) => (
       <Btn
@@ -66,14 +85,21 @@ export class NewButtons extends React.Component<{}, NewButtonsState> {
       <Div css={styles.buttonsWrapper()}>
         {btns}
         <Modal
+          title={'添加工作簿'}
           show={this.state.showWbModal}
           maskTransparency={0.5}
+          handleClose={() => this.closeModal('wb')}
+          handleSuccess={() => this.saveForm()}
         >
           <Div />
         </Modal>
         <Modal
+          title={'添加记录'}
           show={this.state.showWbItemModal}
           maskTransparency={0}
+          handleClose={() => this.closeModal('wbItem')}
+          handleSuccess={() => this.saveForm()}
+          size={'small'}
         >
           <Div >666</Div>
         </Modal>
