@@ -41,12 +41,14 @@ export class NewButtons extends React.Component<{}, NewButtonsState> {
     }
     if (type === 'wb') {
       this.setState({
-        showWbModal: true
+        showWbModal: true,
+        showAnimate: false,
       });
     }
     if (type === 'wbItem') {
       this.setState({
-        showWbItemModal: true
+        showWbItemModal: true,
+        showAnimate: false,
       });
     }
   }
