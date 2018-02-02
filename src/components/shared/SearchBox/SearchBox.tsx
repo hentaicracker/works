@@ -10,7 +10,7 @@ export class SearchBox extends React.Component<Props, {}> {
   render() {
     return (
       <Div css={styles.searchBox()}>
-        <Input />
+        <Input placeholder="搜索"/>
       </Div>
     );
   }

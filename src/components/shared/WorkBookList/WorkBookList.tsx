@@ -1,6 +1,6 @@
 import * as React from 'react';
 import glamorous from 'glamorous';
-import { Workbook } from '../SiderMenu';
+import { Workbook } from '../../../utils/appInterface';
 
 import * as styles from './WorkBookList-styles';
 

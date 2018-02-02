@@ -5,15 +5,11 @@ import { LogoPad } from '../LogoPad';
 import { WorkBookList } from '../WorkBookList';
 import { NewButtons } from '../NewButtons';
 import { selectWorkbook } from '../../../state/actionCreator';
+import { Workbook } from '../../../utils/appInterface';
 
 import * as styles from './SiderMenu-styles';
 
 const { Aside } = glamorous;
-
-export interface Workbook {
-  workbookId: string;
-  workbookName: string;
-}
 
 interface SiderMenuProps {
   workBookList: Array<Workbook>;

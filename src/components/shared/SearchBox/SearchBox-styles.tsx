@@ -11,8 +11,15 @@ export const searchBox = (): CSSProperties => ({
     height: 40,
     border: `1px solid ${colors.themeBorder}`,
     padding: '5px 20px',
-    outlineColor: colors.themeLightColor,
-    boxShadow: `0 2px 5px ${colors.shadowGray}`,
+    boxShadow: `0 0 10px ${colors.shadowGray}`,
     fontSize: 16,
+    outline: 'none',
+    '&:focus': {
+      border: `1px solid ${colors.themeLightColor}`,
+    },
+
+    '&::placeholder': {
+      color: colors.regularGray,
+    }
   },
 });

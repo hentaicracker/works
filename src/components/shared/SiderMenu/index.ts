@@ -1,1 +1,1 @@
-export { SiderMenu, Workbook } from './SiderMenu';
+export { SiderMenu } from './SiderMenu';
