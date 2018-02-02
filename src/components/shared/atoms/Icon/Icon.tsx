@@ -21,12 +21,12 @@ export class Icon extends React.Component<IconProps, {}> {
   static propTypes = {
     type: PropTypes.string.isRequired,
     animate: PropTypes.bool,
-    position: {
+    position: PropTypes.shape({
       top: PropTypes.number,
       right: PropTypes.number,
       bottom: PropTypes.number,
       left: PropTypes.number,
-    },
+    }),
     onClick: PropTypes.func,
   };
 

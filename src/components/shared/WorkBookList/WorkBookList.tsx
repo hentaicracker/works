@@ -1,23 +1,21 @@
 import * as React from 'react';
 import glamorous from 'glamorous';
+import { Workbook } from '../SiderMenu';
 
 import * as styles from './WorkBookList-styles';
 
 const { Ul, Li } = glamorous;
 
 interface Props {
-  list: Array<{
-    workbookId: string;
-    workbookName: string;
-  }>;
-  activeWb: string;
+  list: Array<Workbook>;
+  activeWb: Workbook;
   onClick: Function;
 }
 
 function Item(props: any) {
   return (
-    <Li css={styles.wbItem(props.highLight)} onClick={() => props.onClick(props.id)}>
-      {props.name}
+    <Li css={styles.wbItem(props.highLight)} onClick={() => props.onClick(props.item)}>
+      {props.item.workbookName}
     </Li>
   );
 }
@@ -28,10 +26,9 @@ export class WorkBookList extends React.Component<Props, {}> {
     return this.props.list.map((item, idx) => (
       <Item 
         key={idx}
-        id={item.workbookId}
-        name={item.workbookName}
-        highLight={this.props.activeWb === item.workbookId}
-        onClick={(id: string) => this.props.onClick(id)}
+        item={item}
+        highLight={this.props.activeWb.workbookId === item.workbookId}
+        onClick={(i: Workbook) => this.props.onClick(i)}
       />
     ));
   }

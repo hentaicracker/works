@@ -19,3 +19,10 @@ export function requestError(e: string) {
     error: e,
   };
 }
+
+export function selectWorkbook(wb: object) {
+  return {
+    type: action.WORKBOOK_SELECTED,
+    wb: wb
+  };
+}

@@ -1,9 +1,8 @@
 {
-  "name": "antd-demo-ts",
+  "name": "works",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@types/prop-types": "^15.5.2",
     "antd": "^3.0.0",
     "axios": "^0.17.1",
     "core-decorators": "^0.20.0",
@@ -30,6 +29,7 @@
     "@types/react": "^16.0.27",
     "@types/react-dom": "^16.0.3",
     "@types/react-redux": "^5.0.14",
+    "@types/prop-types": "^15.5.2",
     "react-app-rewire-less": "^2.1.0",
     "react-app-rewired": "^1.3.6",
     "ts-import-plugin": "^1.4.3"
