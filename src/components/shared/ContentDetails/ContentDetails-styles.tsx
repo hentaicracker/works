@@ -5,6 +5,6 @@ export const contentWrapper = () => ({
   position: 'absolute',
   backgroundColor: colors.white,
   right: 0,
-  width: '50%',
+  width: '60%',
   height: '100%',
 } as CSSProperties);

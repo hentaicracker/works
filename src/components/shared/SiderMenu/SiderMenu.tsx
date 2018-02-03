@@ -1,51 +1,44 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import glamorous from 'glamorous';
 import { LogoPad } from '../LogoPad';
 import { WorkBookList } from '../WorkBookList';
 import { NewButtons } from '../NewButtons';
-import { autobind } from 'core-decorators';
-
-import { workbooklist } from '../../../state/data';
+import { selectWorkbook } from '../../../state/actions';
+import { Workbook } from '../../../utils/appInterface';
 
 import * as styles from './SiderMenu-styles';
 
 const { Aside } = glamorous;
 
-interface Props { }
-
-interface SiderMenuState {
-  workBookList: Array<{
-    workbookId: string;
-    workbookName: string;
-  }>;
-  activeWb: string;
+interface SiderMenuProps {
+  workBookList: Array<Workbook>;
+  activeWb: Workbook;
+  selectWorkbook: any;
 }
 
-export class SiderMenu extends React.Component<Props, SiderMenuState> {
+interface SiderMenuState {}
 
-  state: SiderMenuState = {
-    workBookList: workbooklist,
-    activeWb: '',
-  };
+const mapStateToProps = (state: any) => ({
+  workBookList: state.data.workbooks,
+  activeWb: state.data.activeWorkbook,
+});
 
-  @autobind
-  handleClick(id: string) {
-    this.setState({
-      activeWb: id
-    });
-  }
+export class SiderMenuImpl extends React.Component<SiderMenuProps, SiderMenuState> {
 
   render() {
     return (
       <Aside css={styles.aside()}>
         <LogoPad />
         <WorkBookList 
-          list={this.state.workBookList} 
-          activeWb={this.state.activeWb}
-          onClick={(id: string) => this.handleClick(id)} 
+          list={this.props.workBookList} 
+          activeWb={this.props.activeWb}
+          onClick={(wb: string) => this.props.selectWorkbook(wb)} 
         />
         <NewButtons />
       </Aside>
     );
   }
 }
+
+export const SiderMenu = connect(mapStateToProps, { selectWorkbook })(SiderMenuImpl);

@@ -4,6 +4,7 @@ import { CSSProperties } from 'glamorous';
 export const icon = (animate: boolean): CSSProperties => ({
   position: 'absolute',
   display: 'block',
+  cursor: 'pointer',
   
   '&.plus': {
     width: 30,
