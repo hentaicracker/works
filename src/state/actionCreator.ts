@@ -1,3 +1,4 @@
+import { NoteItem } from '../utils/appInterface';
 import * as action from './constants';
 
 export function dataRequest() {
@@ -20,9 +21,17 @@ export function requestError(e: string) {
   };
 }
 
-export function selectWorkbook(wb: object) {
+export function selectWorkbook(wb: any) {
   return {
     type: action.WORKBOOK_SELECTED,
-    wb: wb
+    wb: wb,
+    notes: wb.notes,
+  };
+}
+
+export function selectNote(note: NoteItem) {
+  return {
+    type: action.NOTE_SELECTED,
+    note: note
   };
 }

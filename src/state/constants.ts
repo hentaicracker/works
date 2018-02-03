@@ -10,3 +10,4 @@ export const DATA_RECEIVED = 'DATA_RECEIVED';
 export const GET_DATA = 'GET_DATA';
 export const REQUEST_ERROR = 'REQUEST_ERROR';
 export const WORKBOOK_SELECTED = 'WORKBOOK_SELECTED';
+export const NOTE_SELECTED = 'NOTE_SELECTED';

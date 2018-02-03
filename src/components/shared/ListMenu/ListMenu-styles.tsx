@@ -4,11 +4,11 @@ import { CSSProperties } from 'glamorous';
 export const listWrapper = (): CSSProperties => ({
   position: 'absolute',
   left: '260px',
-  right: '50%',
+  right: '60%',
   height: '100%',
 
   '& header': {
-    padding: '20px 0'
+    paddingTop: 20
   }
 });
 
