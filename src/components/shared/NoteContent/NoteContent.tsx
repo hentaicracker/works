@@ -27,7 +27,7 @@ export class NoteContentImpl extends React.Component<NoteContentProps, {}> {
       <Note 
         key={idx} 
         note={note} 
-        active={this.props.activeNote.noteId === note.noteId}
+        active={this.props.activeNote ? this.props.activeNote.noteId === note.noteId : false}
         onClick={() => this.props.selectNote(note)}
       />
     ));

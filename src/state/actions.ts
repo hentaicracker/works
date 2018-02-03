@@ -13,3 +13,10 @@ export function getData(state: object, route: string) {
     }
   };
 }
+
+export function selectWorkbook(wb: any) {
+  return (dispatch: any) => {
+    dispatch(actions.setNoteUnselected());
+    dispatch(actions.selectWorkbook(wb));
+  };
+}

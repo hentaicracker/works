@@ -21,6 +21,12 @@ export function requestError(e: string) {
   };
 }
 
+export function setNoteUnselected() {
+  return {
+    type: action.SET_NOTE_UNSELECTED,
+  };
+}
+
 export function selectWorkbook(wb: any) {
   return {
     type: action.WORKBOOK_SELECTED,

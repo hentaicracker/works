@@ -4,7 +4,7 @@ import glamorous from 'glamorous';
 import { LogoPad } from '../LogoPad';
 import { WorkBookList } from '../WorkBookList';
 import { NewButtons } from '../NewButtons';
-import { selectWorkbook } from '../../../state/actionCreator';
+import { selectWorkbook } from '../../../state/actions';
 import { Workbook } from '../../../utils/appInterface';
 
 import * as styles from './SiderMenu-styles';

@@ -22,11 +22,16 @@ function appReducer(state = APP_INITIAL_STATE, action: any) {
 
 function dataReducer(state = DATA_INITIAL_STATE, action: any) {
   switch (action.type) {
+    case(types.SET_NOTE_UNSELECTED):
+      return {
+        ...state,
+        activeNote: null
+      };
     case(types.WORKBOOK_SELECTED):
       return {
         ...state,
         activeWorkbook: action.wb,
-        notes: action.notes
+        notes: action.notes,
       };
     case(types.NOTE_SELECTED):
       return {
