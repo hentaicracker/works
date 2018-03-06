@@ -6,7 +6,7 @@ export const workbooklist = [
       {
         noteId: '1_n1',
         title: '今天 todos',
-        description: '今天的任务啪啦啪啦啪啦巴拉巴拉巴拉巴拉爱上了对方空间阿斯顿发生地方申达股份',
+        description: '爱上了对方空间阿斯顿发生地方申达股份的任务啪啦啪啦啪啦巴拉巴的任务啪啦啪啦啪啦巴拉巴的任务啪啦啪啦啪啦巴拉巴的任务啪啦啪啦啪啦巴拉巴',
         date: '2018-02-03'
       },
       {
@@ -18,19 +18,19 @@ export const workbooklist = [
       {
         noteId: '1_n3',
         title: '6666',
-        description: '啥玩意',
+        description: '啥玩意testset',
         date: '2018-02-03'
       },
       {
         noteId: '1_n4',
-        title: '6666',
-        description: '啥玩意',
+        title: '44444444444444',
+        description: '啥玩意44444444444444444',
         date: '2018-02-03'
       },
       {
         noteId: '1_n5',
-        title: '6666',
-        description: '啥玩意',
+        title: '666666666666666',
+        description: '啥玩意6666666666666666',
         date: '2018-02-03'
       },
       {
@@ -59,11 +59,15 @@ export const workbooklist = [
     notes: [
       {
         noteId: '2_n1',
-        title: 'javascript array cheatsheet'
+        title: 'javascript array cheatsheet',
+        description: '暂无简要',
+        date: '2018-02-03'
       },
       {
         noteId: '2_n2',
-        title: 'javascript string cheatsheet'
+        title: 'javascript string cheatsheet',
+        description: '暂无简要',
+        date: '2018-02-03'
       },
     ]
   },

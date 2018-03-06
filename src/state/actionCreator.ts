@@ -41,3 +41,10 @@ export function selectNote(note: NoteItem) {
     note: note
   };
 }
+
+export function updateNote(note: NoteItem) {
+  return {
+    type: action.NOTE_SELECTED,
+    note: note
+  }
+}
