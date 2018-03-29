@@ -93,7 +93,7 @@ export class NewButtons extends React.Component<{}, NewButtonsState> {
           handleClose={() => this.closeModal('wb')}
           handleSuccess={() => this.saveForm()}
         >
-          <Div />
+          <Div >666</Div>
         </Modal>
         <Modal
           title={'添加记录'}
