@@ -35,29 +35,3 @@ export const tip = (): CSSProperties => ({
   paddingTop: '10em',
   color: colors.themeBorder
 });
-
-export const editorWrapper = (): CSSProperties => ({
-  borderTop: `1px solid ${colors.themeBorder}`,
-  display: 'flex',
-  height: 'calc(100% - 157px)'
-});
-
-export const left = (): CSSProperties => ({
-  width: 'calc(50% - 1px)',
-  borderRight: `1px solid ${colors.themeBorder}`,
-  padding: 20,
-
-  '& .ReactCodeMirror': {
-    height: '100%',
-
-    '& .CodeMirror': {
-      height: '100%'
-    }
-  }
-});
-
-export const right = (): CSSProperties => ({
-  width: '50%',
-  padding: '20px 30px',
-  overflow: 'scroll',
-});

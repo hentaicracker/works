@@ -3,19 +3,15 @@ import glamorous from 'glamorous';
 import { connect } from 'react-redux';
 import { NoteItem } from '../../../utils/appInterface';
 import * as styles from './ContentDetails-styles';
+import { updateNote } from '../../../state/actionCreator';
 
-import { autobind } from 'core-decorators';
-
-const CodeMirror = require('react-codemirror');
-const Markdown = require('react-markdown');
-
-require('codemirror/mode/markdown/markdown');
-require('codemirror/lib/codemirror.css');
+import { Editor } from '../atoms/Editor';
 
 const { Div, Section, Header, H4, P } = glamorous;
 
 interface ContentDetailsProps {
   activeNote: NoteItem;
+  updateNote: any;
 }
 
 const mapStateToProps = (state: any) => ({
@@ -23,42 +19,6 @@ const mapStateToProps = (state: any) => ({
 });
 
 export class ContentDetailsImpl extends React.Component<ContentDetailsProps, {}> {
-
-  state = {
-    source: ''
-  }
-
-  @autobind()
-  updateSource(source: string) {
-    this.setState({
-      source: source
-    })
-  }
-
-  renderViews() {
-    const editorOptions = {
-      mode: 'markdown'
-    };
-    return (
-      <Div css={styles.editorWrapper()}>
-        <Div css={styles.left()}>
-          <CodeMirror 
-            value={this.state.source} 
-            onChange={this.updateSource} 
-            options={editorOptions}
-            autoFocus={true}
-          />
-        </Div>
-        <Div css={styles.right()}>
-          <Markdown 
-            source={this.state.source}
-            skipHtml={false}
-            escapeHtml={true}
-          />
-        </Div>
-      </Div>
-    )
-  }
 
   render() {
     return (
@@ -70,7 +30,7 @@ export class ContentDetailsImpl extends React.Component<ContentDetailsProps, {}>
               <P css={styles.date()}>{this.props.activeNote.date}</P>
               <P css={styles.description()}>{this.props.activeNote.description}</P>
             </Header>
-            {this.renderViews()}
+            <Editor source={this.props.activeNote.source} />
           </Div>
         ) : (
           <Div css={styles.tip()}>请选择一条记录进行预览</Div>
@@ -81,4 +41,4 @@ export class ContentDetailsImpl extends React.Component<ContentDetailsProps, {}>
   }
 }
 
-export const ContentDetails = connect(mapStateToProps)(ContentDetailsImpl);
+export const ContentDetails = connect(mapStateToProps, { updateNote })(ContentDetailsImpl);

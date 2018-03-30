@@ -46,5 +46,5 @@ export function updateNote(note: NoteItem) {
   return {
     type: action.NOTE_SELECTED,
     note: note
-  }
+  };
 }

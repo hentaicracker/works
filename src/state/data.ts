@@ -7,13 +7,15 @@ export const workbooklist = [
         noteId: '1_n1',
         title: '今天 todos',
         description: '爱上了对方空间阿斯顿发生地方申达股份的任务啪啦啪啦啪啦巴拉巴的任务啪啦啪啦啪啦巴拉巴的任务啪啦啪啦啪啦巴拉巴的任务啪啦啪啦啪啦巴拉巴',
-        date: '2018-02-03'
+        date: '2018-02-03',
+        source: '# test'
       },
       {
         noteId: '1_n2',
         title: '6666',
         description: '啥玩意',
-        date: '2018-02-03'
+        date: '2018-02-03',
+        source: '# test gg'
       },
       {
         noteId: '1_n3',
